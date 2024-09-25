@@ -1,7 +1,7 @@
-# Магазик coffee-club
+# Магазик "coffee-club"
 
 ## Тренировочный проект по JavaScript HTML VUE и все такое, от glo-academy.org 
-#### Ведущий Александр Ильясов 
+#### Ведущий: Александр Ильясов 
 
 
 ## Project setup
