@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <!---Header--->
+            <!---Header-nav--->
             <nav-bar-component />
           </div>
         </div>
@@ -19,6 +19,8 @@
         </div>
       </div>
     </div>
+
+    <!---The-Hero--->
     <section class="about">
       <div class="container">
         <div class="row">
