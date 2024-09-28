@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import router from "@/router";
+</script>
+
 <template>
   <footer>
     <div class="container">
@@ -5,18 +9,18 @@
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
             <li class="footer__item">
-              <a href="@/index.html">
-                <img src="@/assets/logo/Logo_black.svg" alt="logo" />
-              </a>
+              <router-link to="/"
+                ><img src="@/assets/logo/Logo_black.svg" alt="logo"
+              /></router-link>
             </li>
             <li class="footer__item">
-              <a href="@/coffeepage.html">Our coffee</a>
+              <router-link to="/our-coffee">Our coffe</router-link>
             </li>
             <li class="footer__item">
-              <a href="@/goodspage.html">For your pleasure</a>
+              <router-link to="/goodspage">For your pleasure</router-link>
             </li>
             <li class="footer__item">
-              <a href="@/contacts.html">Contact us</a>
+              <router-link to="/contacts">Contact us</router-link>
             </li>
           </ul>
         </div>
