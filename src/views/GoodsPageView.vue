@@ -69,5 +69,67 @@ import BestCardsComponent from "@/components/BestCardsComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 export default {
   components: { NavBarComponent, BestCardsComponent, ProductCard },
+  data() { 
+    return {
+      cards: [
+        {
+          id: 1,
+          title: 'Solimo Coffee Beans 2kg',
+          country: 'Brasil',
+          price: '10.73$',
+          img: 'coffee.jpg',
+        },
+        {
+          id: 2,
+          title: 'Presto Coffee Beans 1kg',
+          country: 'Brasil',
+          price: '15.99$',
+          img: 'coffee.jpg',
+        },
+        {
+          id: 3,
+          title: 'AROMISTICO Coffee 1kg',
+          country: 'Brasil',
+          price: '6.99$',
+          img: 'coffee.jpg',
+        },
+        {
+          id: 4,
+          title: 'Solimo Coffee Beans 2kg',
+          country: 'Brasil',
+          price: '10.73$',
+          img: 'coffee.jpg',
+        },
+        {
+          id: 5,
+          title: 'Solimo Coffee Beans 2kg',
+          country: 'Brasil',
+          price: '10.73$',
+          img: 'coffee.jpg',
+        },
+        {
+          id: 6,
+          title: 'Solimo Coffee Beans 2kg',
+          country: 'Brasil',
+          price: '10.73$',
+          img: 'coffee.jpg',
+        },
+        {
+          id: 7,
+          title: 'Coffee',
+          country: 'Brasil',
+          price: '10.73$',
+          img: 'coffee.jpg',
+        },
+        {
+          id: 8,
+          title: 'Coffee',
+          country: 'Brasil',
+          price: '10.73$',
+          img: 'coffee.jpg',
+        },
+      ]
+    }
+}
 };
 </script>
