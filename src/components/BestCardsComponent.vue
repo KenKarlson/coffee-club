@@ -18,6 +18,27 @@
 <script>
 import ProductCard from '@/components/ProductCard.vue';  
 export default {
-  components: { ProductCard }
+  components: { ProductCard },
+  data() { 
+    return {
+      cards: [
+        {
+          id: 0,
+          name: 'Product 1',
+          img: 'https:',
+        },
+        {
+          id: 1,
+          name: 'Product 2',
+          img: 'https:',
+        },
+        {
+          id: 2,
+          name: 'Product 3',
+          img: 'https:',
+        }
+      ]
+    }
+  }
 }
 </script>
