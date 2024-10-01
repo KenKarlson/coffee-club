@@ -1,28 +1,52 @@
 <template>
   <header>
-    <ul class="header d-flex justify-content-center justify-content-md-start flex-wrap">
+    <ul
+      class="header d-flex justify-content-center justify-content-md-start flex-wrap"
+    >
       <li class="header__item">
-        <router-link to="/">
-          <img src="@/assets/Logo.svg" alt="logo">
+        <router-link :to="links[0].link">
+          <img :src="require(`@/assets/${links[0].icon}`)" :alt="links[0].logo" />
         </router-link>
-        <!-- <a href="./index.html">
-          <img src="@/assets/Logo.svg" alt="logo">
-        </a> -->
       </li>
       <li class="header__item">
-        <router-link to="/our-coffee">Our coffe</router-link>
-        <!-- <a href="./coffeepage.html">Our coffee</a> -->
+        <router-link :to="links[1].link">{{links[1].text}}</router-link>
       </li>
       <li class="header__item">
-        <router-link to="/goodspage">For your pleasure</router-link>
+        <router-link :to="links[2].link">{{links[2].text}}</router-link>
       </li>
       <li class="header__item">
-        <router-link to="/contacts">Contact us</router-link>
-      </li>
-      <li class="header__item">
-        <router-link to="/thanks">Thanks</router-link>
-        <!-- <a href="./coffeepage.html">Our coffee</a> -->
+        <router-link v-bind:to="links[3].link">{{links[3].text}}</router-link>
       </li>
     </ul>
   </header>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      links: [
+        {
+          id: 0,
+          link: "/",
+          icon: "Logo.svg",
+        },
+        { 
+          id: 1, 
+          text: "Our coffe", 
+          link: "/our-coffee" 
+        },
+        { 
+          id: 2, 
+          text: "For your pleasure", 
+          link: "/goodspage" 
+        },
+        { 
+          id: 3, 
+          text: "Contact us", 
+          link: "/contacts" 
+        },
+      ],
+    };
+  },
+};
+</script>
