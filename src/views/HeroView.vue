@@ -46,6 +46,10 @@
     </section>
     <!---The-Best-Cards--->
     <best-cards-component />
+     <!-- <product-card-component></product-card-component> -->
+     <!-- <product-card :name="bestsellers[0].name" :price="bestsellers[0].price" :image="bestsellers[0].image" />
+     <product-card :name="bestsellers[1].name" :price="bestsellers[1].price" :image="bestsellers[1].image" />
+     <product-card :name="bestsellers[2].name" :price="bestsellers[2].price" :image="bestsellers[2].image" /> -->
 
   </main>
 </template>
@@ -53,9 +57,35 @@
 <script>
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import BestCardsComponent from '@/components/BestCardsComponent.vue'
-//import BestCardsComponentVue from '@/components/BestCardsComponent.vue';
+import ProductCard from '@/components/ProductCard.vue';
 
 export default {
-  components: { NavBarComponent, BestCardsComponent }
+  components: { NavBarComponent, BestCardsComponent, ProductCard },
+  data() {
+    return {
+      bestsellers:[
+        {
+          id: 0,
+          name: 'Solimo Coffee Beans 2kg',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+
+        },
+        {
+          id: 1,
+          name: 'Presto Coffee Beans 2kg',
+          price: 15.99,
+          image: 'coffee-2.jpg',
+        },
+        {
+          id: 2,
+          name: 'AROMOSTICO Coffee 1kg',
+          price: 6.99,
+          image: 'coffee-3.jpg',
+        }
+      ]
+    }
+  }
+
 }
 </script>

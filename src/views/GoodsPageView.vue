@@ -15,19 +15,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img
-              class="shop__girl"
-              src="@/assets/img/coffee_goods.jpg"
-              alt="girl"
-            />
+            <img class="shop__girl" src="@/assets/img/coffee_goods.jpg" alt="girl" />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img
-              class="beanslogo"
-              src="@/assets/logo/Beans_logo_dark.svg"
-              alt="Beans logo"
-            />
+            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
             <div class="shop__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible.
@@ -49,12 +41,12 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card classItem="shop__item" :name="goodscards[1].name" :price="goodscards[1].price" :image="goodscards[1].image" />
+              <product-card classItem="shop__item" :name="goodscards[2].name" :price="goodscards[2].price" :image="goodscards[2].image" />
+              <product-card classItem="shop__item" :name="goodscards[3].name" :price="goodscards[3].price" :image="goodscards[3].image" />
+              <product-card classItem="shop__item" :name="goodscards[4].name" :price="goodscards[4].price" :image="goodscards[4].image" />
+              <product-card classItem="shop__item" :name="goodscards[5].name" :price="goodscards[5].price" :image="goodscards[5].image" />
+              <product-card classItem="shop__item" :name="goodscards[6].name" :price="goodscards[6].price" :image="goodscards[6].image" />
             </div>
           </div>
         </div>
@@ -69,67 +61,67 @@ import BestCardsComponent from "@/components/BestCardsComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 export default {
   components: { NavBarComponent, BestCardsComponent, ProductCard },
-  data() { 
+  data() {
     return {
-      cards: [
+      goodscards: [
         {
           id: 1,
-          title: 'Solimo Coffee Beans 2kg',
+          name: 'Solimo Coffee Beans 2kg',
           country: 'Brasil',
-          price: '10.73$',
-          img: 'coffee.jpg',
+          price: 10.73,
+          image: 'coffee-1.jpg',
         },
         {
           id: 2,
-          title: 'Presto Coffee Beans 1kg',
+          name: 'Presto Coffee Beans 1kg',
           country: 'Brasil',
-          price: '15.99$',
-          img: 'coffee.jpg',
+          price: 15.99,
+          image: 'coffee-2.jpg',
         },
         {
           id: 3,
-          title: 'AROMISTICO Coffee 1kg',
+          name: 'AROMISTICO Coffee 1kg',
           country: 'Brasil',
-          price: '6.99$',
-          img: 'coffee.jpg',
+          price: 6.99,
+          image: 'coffee-1.jpg',
         },
         {
           id: 4,
-          title: 'Solimo Coffee Beans 2kg',
+          name: 'Solimo Coffee Beans 2kg',
           country: 'Brasil',
-          price: '10.73$',
-          img: 'coffee.jpg',
+          price: 10.73,
+          image: 'coffee-2.jpg',
         },
         {
           id: 5,
-          title: 'Solimo Coffee Beans 2kg',
+          name: 'Solimo Coffee Beans 2kg',
           country: 'Brasil',
-          price: '10.73$',
-          img: 'coffee.jpg',
+          price: 10.73,
+          image: 'coffee-3.jpg',
         },
         {
           id: 6,
-          title: 'Solimo Coffee Beans 2kg',
+          name: 'Solimo Coffee Beans 2kg',
           country: 'Brasil',
-          price: '10.73$',
-          img: 'coffee.jpg',
+          price: 10.73,
+          image: 'coffee-1.jpg',
         },
         {
           id: 7,
-          title: 'Coffee',
+          name: 'Coffee',
           country: 'Brasil',
-          price: '10.73$',
-          img: 'coffee.jpg',
+          price: 10.73,
+          image: 'coffee-2.jpg',
         },
         {
           id: 8,
-          title: 'Coffee',
+          name: 'Coffee-3',
           country: 'Brasil',
-          price: '10.73$',
-          img: 'coffee.jpg',
+          price: 10.73,
+          image: 'coffee-3.jpg',
         },
       ]
     }
-}
+  }
 };
 </script>
