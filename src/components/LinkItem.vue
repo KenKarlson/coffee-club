@@ -1,18 +1,17 @@
 <template>
   <li class="header__item">
     <router-link :to="link">
-      <img :src="require(`@/assets/logo/${image}`)" />
+      <img :src="require(`@/assets/logo/${image}`)" :alt="image" />
       {{ text }}
     </router-link>
   </li>
 </template>
-
 <script>
 export default {
   props: {
-    text: {  },
+    text: { required: false },
     link: {  },
-    image: { required: false },
+    image: { required: false}
   },
 };
 </script>
