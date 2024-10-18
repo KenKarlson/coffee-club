@@ -5,9 +5,9 @@
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="best__wrapper">
-            <product-card />
-            <product-card />
-            <product-card />
+            <product-card classItem="best__item" :name="cards[0].name" :price="cards[0].price" :image="cards[0].image" />
+            <product-card classItem="best__item" :name="cards[1].name" :price="cards[1].price" :image="cards[1].image" />
+            <product-card classItem="best__item" :name="cards[2].name" :price="cards[2].price" :image="cards[2].image" />
           </div>
         </div>
       </div>
@@ -16,26 +16,29 @@
 </template>
 
 <script>
-import ProductCard from '@/components/ProductCard.vue';  
+import ProductCard from '@/components/ProductCard.vue';
 export default {
   components: { ProductCard },
-  data() { 
+  data() {
     return {
       cards: [
         {
           id: 0,
           name: 'Product 1',
-          img: 'https:',
+          price: 10.99,
+          image: 'coffee-1.jpg',
         },
         {
           id: 1,
           name: 'Product 2',
-          img: 'https:',
+          price: 11.75,
+          image: 'coffee-2.jpg',
         },
         {
           id: 2,
           name: 'Product 3',
-          img: 'https:',
+          price: 15.99,
+          image: 'coffee-3.jpg',
         }
       ]
     }
