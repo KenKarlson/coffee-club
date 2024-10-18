@@ -52,12 +52,12 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card :image="cards[0].image" :product="cards[0].product" :country="cards[0].country" :price="cards[0].price"/>
+              <product-card :image="cards[1].image" :product="cards[1].product" :country="cards[1].country" :price="cards[1].price"/>
+              <product-card :image="cards[2].image" :product="cards[2].product" :country="cards[2].country" :price="cards[2].price"/>
+              <product-card :image="cards[3].image" :product="cards[3].product" :country="cards[3].country" :price="cards[3].price"/>
+              <product-card :image="cards[4].image" :product="cards[4].product" :country="cards[4].country" :price="cards[4].price"/>
+              <product-card :image="cards[5].image" :product="cards[5].product" :country="cards[5].country" :price="cards[5].price"/>
             </div>
           </div>
         </div>
@@ -77,44 +77,44 @@ export default {
       cards: [
         {
           id: 0,
-          icon: "coffee-1.jpg",
-          text: "AROMISTICO Coffee 1kg",
+          image: "coffee-3.jpg",
+          product: "AROMISTICO Coffee 1kg",
           country: "Brazil",
           price: "6.99$",
         },
         {
           id: 1,
-          icon: "coffee-2.jpg",
-          text: "AROMISTICO Coffee 2kg",
-          country: "Brazil",
-          price: "6.99$",
+          image: "coffee-3.jpg",
+          product: "CREUSANE 1kg",
+          country: "Dertyua",
+          price: "16.99$",
         },
         {
           id: 2,
-          icon: "coffee-3.jpg",
-          text: "AROMISTICO Coffee 3kg",
-          country: "Brazil",
-          price: "6.99$",
+          image: "coffee-3.jpg",
+          product: "MUCHACHO Coffee 1kg",
+          country: "Mexic",
+          price: "9.99$",
         },
         {
           id: 3,
-          icon: "coffee-3.jpg",
-          text: "AROMISTICO Coffee 1kg",
-          country: "Brazil",
-          price: "6.99$",
+          image: "coffee-3.jpg",
+          product: "Chi-Pen Coffee 1kg",
+          country: "China",
+          price: "3.99$",
         },
         {
           id: 4,
-          icon: "coffee-3.jpg",
-          text: "AROMISTICO Coffee 1kg",
-          country: "Brazil",
-          price: "6.99$",
+          image: "coffee-3.jpg",
+          product: "GERMER Coffee 1kg",
+          country: "Austria",
+          price: "12.99$",
         },
         {
           id: 5,
-          icon: "coffee-3.jpg",
-          text: "AROMISTICO Coffee 1kg",
-          country: "Brazil",
+          image: "coffee-3.jpg",
+          product: "АРОМАТНОЕ Coffee 1kg",
+          country: "Luanda",
           price: "6.99$",
         },
       ],
