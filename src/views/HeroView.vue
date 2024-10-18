@@ -83,9 +83,9 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <best-card />
-              <best-card />
-              <best-card />
+              <best-cards :image="cards[0].image" :text="cards[0].text" :price="cards[0].price"/>
+              <best-cards :image="cards[1].image" :text="cards[1].text" :price="cards[1].price"/>
+              <best-cards :image="cards[2].image" :text="cards[2].text" :price="cards[2].price"/>
             </div>
           </div>
         </div>
@@ -96,34 +96,31 @@
 
 <script>
 import NavBarComponent from "../components/NavBarComponent.vue";
-import BestCard from "@/components/BestCard.vue";
+import BestCards from "@/components/BestCards.vue";
 import LinkItem from "@/components/LinkItem.vue";
 
 export default {
-  components: { NavBarComponent, BestCard, LinkItem },
+  components: { NavBarComponent, BestCards, LinkItem },
   data() {
     return {
       cards: [
         {
           id: 0,
           text: "Coffee Aura",
-          country: "Quar",
           price: "9.99$",
-          icon: "coffee-1.jpg",
+          image: "coffee-1.jpg",
         },
         {
           id: 1,
           text: "Coffee Maina",
-          country: "Brazil",
-          price: "9.99$",
-          icon: "coffee-2.jpg",
+          price: "19.99$",
+          image: "coffee-2.jpg",
         },
         {
           id: 2,
           text: "Coffee Nesq",
-          country: "Chia",
-          price: "9.99$",
-          icon: "coffee-3.jpg",
+          price: "23.99$",
+          image: "coffee-3.jpg",
         },
       ],
       links: [
