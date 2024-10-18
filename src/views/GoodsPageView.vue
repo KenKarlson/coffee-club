@@ -4,8 +4,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <!--NavBarHeader-->
-            <nav-bar-component />
+            <link-item 
+                :link="links[0].link"
+                :text="links[0].text" 
+                :image="links[0].icon"
+              />
           </div>
         </div>
         <h1 class="title-big">For your pleasure</h1>
@@ -56,11 +59,12 @@
 </template>
 
 <script>
-import NavBarComponent from "@/components/NavBarComponent.vue";
 import BestCardsComponent from "@/components/BestCardsComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import LinkItem from "@/components/LinkItem.vue";
+
 export default {
-  components: { NavBarComponent, BestCardsComponent, ProductCard },
+  components: { BestCardsComponent, ProductCard, LinkItem },
   data() {
     return {
       goodscards: [
@@ -120,7 +124,45 @@ export default {
           price: 10.73,
           image: 'coffee-3.jpg',
         },
-      ]
+      ],
+      links: [
+        {
+          id: 0,
+          text: "",
+          link: "/",
+          icon: "Logo.svg",
+        },
+        {
+          id: 1,
+          text: "Our coffee",
+          link: "/coffeepage.html",
+          icon: "",
+        },
+        {
+          id: 2,
+          text: "For your pleasure",
+          link: "/goodspage.html",
+          icon: "",
+        },
+        {
+          id: 3,
+          text: "Contact us",
+          link: "/contacts.html",
+          icon: "",
+        },
+        {
+          id: 4,
+          text: "",
+          link: "",
+          icon: "",
+        },
+        {
+          id: 5,
+          text: "",
+          link: "",
+          icon: "",
+        },
+      ],
     }
   }
 };

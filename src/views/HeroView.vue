@@ -6,7 +6,11 @@
         <div class="row">
           <div class="col">
             <ul class="header d-flex justify-content-center justify-content-md-start flex-wrap" >
-              <link-item :link="links[0].link":text="links[0].text" :image="links[0].icon"/>
+              <link-item 
+                :link="links[0].link"
+                :text="links[0].text" 
+                :image="links[0].icon"
+              />
              
               <!-- <link-item :link="links[1].link":text="links[1].text"/>
               <link-item :link="links[2].link":text="links[2].text"/>

@@ -4,7 +4,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <NavBarComponent />
+            <link-item 
+                :link="links[0].link"
+                :text="links[0].text" 
+                :image="links[0].icon"
+              />
           </div>
         </div>
         <h1 class="title-big">For your pleasure</h1>
@@ -63,11 +67,11 @@
 </template>
 
 <script>
-import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import LinkItem from "@/components/LinkItem.vue";
 
 export default {
-  components: { NavBarComponent, ProductCard },
+  components: { ProductCard, LinkItem },
   data() {
     return {
       cards: [
@@ -112,6 +116,44 @@ export default {
           text: "AROMISTICO Coffee 1kg",
           country: "Brazil",
           price: "6.99$",
+        },
+      ],
+      links: [
+        {
+          id: 0,
+          text: "",
+          link: "/",
+          icon: "Logo.svg",
+        },
+        {
+          id: 1,
+          text: "Our coffee",
+          link: "/coffeepage.html",
+          icon: "",
+        },
+        {
+          id: 2,
+          text: "For your pleasure",
+          link: "/goodspage.html",
+          icon: "",
+        },
+        {
+          id: 3,
+          text: "Contact us",
+          link: "/contacts.html",
+          icon: "",
+        },
+        {
+          id: 4,
+          text: "",
+          link: "",
+          icon: "",
+        },
+        {
+          id: 5,
+          text: "",
+          link: "",
+          icon: "",
         },
       ],
     };

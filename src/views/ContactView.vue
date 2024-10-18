@@ -4,12 +4,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <ul class="header d-flex justify-content-center justify-content-md-start flex-wrap">
-              <link-item link="/" text="" image="Logo.png"/>
-              <link-item :link="links[1].link" :text="links[1].text" />
-              <link-item :link="links[2].link" :text="links[2].text" />
-              <link-item :link="links[3].link" :text="links[3].text" />
-            </ul>
+            <link-item 
+                :link="links[0].link"
+                :text="links[0].text" 
+                :image="links[0].icon"
+            />
+            
           </div>
         </div>
         <h1 class="title-big">Contact us</h1>
