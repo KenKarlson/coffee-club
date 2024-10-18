@@ -1,5 +1,5 @@
 <template>
-  <div class="shop__item">
+  <div :class="classItem">
     <img :src="require(`@/assets/img/${image}`)" :alt="image" />
     <div class="best__item-title">{{ product }}</div>
     <div class="shop__item-country">{{ country }}</div>
@@ -9,10 +9,26 @@
 <script>
 export default {
   props: {
-    image: {},
-    product: {},
-    country:{},
-    price: {},
+    image: {
+      type: String,
+      required: true,
+    },
+    product: {
+      type: String,
+      required: true,
+    },
+    country: {
+      type: String,
+      required: false,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    classItem: {
+      type: String,
+      required: false,
+    },
   },
 };
 </script>

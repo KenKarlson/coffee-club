@@ -4,11 +4,17 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <link-item 
-                :link="links[0].link"
-                :text="links[0].text" 
-                :image="links[0].icon"
+            <ul
+              class="header d-flex justify-content-center justify-content-md-start flex-wrap"
+            >
+              <link-item
+                v-for="item in links"
+                :key="item.id"
+                classItem="header__item"
+                :link="item.link"
+                :text="item.text"
               />
+            </ul>
           </div>
         </div>
         <h1 class="title-big">For your pleasure</h1>
@@ -52,12 +58,48 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card :image="cards[0].image" :product="cards[0].product" :country="cards[0].country" :price="cards[0].price"/>
-              <product-card :image="cards[1].image" :product="cards[1].product" :country="cards[1].country" :price="cards[1].price"/>
-              <product-card :image="cards[2].image" :product="cards[2].product" :country="cards[2].country" :price="cards[2].price"/>
-              <product-card :image="cards[3].image" :product="cards[3].product" :country="cards[3].country" :price="cards[3].price"/>
-              <product-card :image="cards[4].image" :product="cards[4].product" :country="cards[4].country" :price="cards[4].price"/>
-              <product-card :image="cards[5].image" :product="cards[5].product" :country="cards[5].country" :price="cards[5].price"/>
+              <product-card
+                classItem="shop__item"
+                :image="cards[0].image"
+                :product="cards[0].product"
+                :country="cards[0].country"
+                :price="cards[0].price"
+              />
+              <product-card
+                classItem="shop__item"
+                :image="cards[1].image"
+                :product="cards[1].product"
+                :country="cards[1].country"
+                :price="cards[1].price"
+              />
+              <product-card
+                classItem="shop__item"
+                :image="cards[2].image"
+                :product="cards[2].product"
+                :country="cards[2].country"
+                :price="cards[2].price"
+              />
+              <product-card
+                classItem="shop__item"
+                :image="cards[3].image"
+                :product="cards[3].product"
+                :country="cards[3].country"
+                :price="cards[3].price"
+              />
+              <product-card
+                classItem="shop__item"
+                :image="cards[4].image"
+                :product="cards[4].product"
+                :country="cards[4].country"
+                :price="cards[4].price"
+              />
+              <product-card
+                classItem="shop__item"
+                :image="cards[5].image"
+                :product="cards[5].product"
+                :country="cards[5].country"
+                :price="cards[5].price"
+              />
             </div>
           </div>
         </div>
@@ -80,42 +122,42 @@ export default {
           image: "coffee-3.jpg",
           product: "AROMISTICO Coffee 1kg",
           country: "Brazil",
-          price: "6.99$",
+          price: 6.99,
         },
         {
           id: 1,
           image: "coffee-3.jpg",
           product: "CREUSANE 1kg",
           country: "Dertyua",
-          price: "16.99$",
+          price: 16.99,
         },
         {
           id: 2,
           image: "coffee-3.jpg",
           product: "MUCHACHO Coffee 1kg",
           country: "Mexic",
-          price: "9.99$",
+          price: 9.99,
         },
         {
           id: 3,
           image: "coffee-3.jpg",
           product: "Chi-Pen Coffee 1kg",
           country: "China",
-          price: "3.99$",
+          price: 3.99,
         },
         {
           id: 4,
           image: "coffee-3.jpg",
           product: "GERMER Coffee 1kg",
           country: "Austria",
-          price: "12.99$",
+          price: 12.99,
         },
         {
           id: 5,
           image: "coffee-3.jpg",
           product: "АРОМАТНОЕ Coffee 1kg",
           country: "Luanda",
-          price: "6.99$",
+          price: 6.99,
         },
       ],
       links: [

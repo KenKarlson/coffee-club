@@ -1,7 +1,6 @@
 <template>
-  <li class="header__item">
+  <li :class="classItem">
     <router-link :to="link">
-      <img :src="require(`@/assets/logo/${image}`)" :alt="image" />
       {{ text }}
     </router-link>
   </li>
@@ -9,9 +8,18 @@
 <script>
 export default {
   props: {
-    text: { required: false },
-    link: {  },
-    image: { required: false}
+    text: {
+      type: String,
+      required: false,
+    },
+    link: {
+      type: String,
+    },
+    image: { required: false },
+    classItem: {
+      type: String,
+      required: false,
+    },
   },
 };
 </script>

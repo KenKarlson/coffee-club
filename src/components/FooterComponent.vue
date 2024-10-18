@@ -5,18 +5,13 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
-            <li class="footer__item">
-              <router-link :to="links[0].link"><img :src="require(`@/assets/logo/${links[0].icon}`)" alt=""/></router-link>
-            </li>
-            <li class="footer__item">
-              <router-link :to="links[1].link">{{ links[1].text }}</router-link>
-            </li>
-            <li class="footer__item">
-              <router-link :to="links[2].link">{{ links[2].text }}</router-link>
-            </li>
-            <li class="footer__item">
-              <router-link :to="links[3].link">{{ links[3].text }}</router-link>
-            </li>
+            <link-item
+              v-for="item in links"
+              classItem="footer__item"
+              :key="item.id"
+              :link="item.link"
+              :text="item.text"
+            />
           </ul>
         </div>
       </div>
@@ -29,7 +24,9 @@
   </footer>
 </template>
 <script>
+import LinkItem from "@/components/LinkItem.vue";
 export default {
+  components: { LinkItem },
   data() {
     return {
       links: [

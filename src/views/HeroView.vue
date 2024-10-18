@@ -5,28 +5,16 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <ul class="header d-flex justify-content-center justify-content-md-start flex-wrap" >
-              <link-item 
-                :link="links[0].link"
-                :text="links[0].text" 
-                :image="links[0].icon"
+            <ul
+              class="header d-flex justify-content-center justify-content-md-start flex-wrap"
+            >
+              <link-item
+                v-for="item in links"
+                :key="item.id"
+                classItem="header__item"
+                :link="item.link"
+                :text="item.text"
               />
-             
-              <!-- <link-item :link="links[1].link":text="links[1].text"/>
-              <link-item :link="links[2].link":text="links[2].text"/>
-              <link-item :link="links[3].link":text="links[3].text"/> -->
-              <!-- <nav-bar-component
-                :text="links[0].text" 
-                :link="links[0].link" 
-                :image="links[0].icon"
-              />
-              <nav-bar-component
-                :text="links[1].text" 
-                :link="links[1].link" 
-                :image="links[1].icon"
-              />
-              <nav-bar-component text="Our coffee" link="/coffeepage.html" />              
-              <nav-bar-component text="For your pleasure" link="/coffeepage.html" /> -->
             </ul>
           </div>
         </div>
@@ -83,9 +71,24 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <best-cards :image="cards[0].image" :text="cards[0].text" :price="cards[0].price"/>
-              <best-cards :image="cards[1].image" :text="cards[1].text" :price="cards[1].price"/>
-              <best-cards :image="cards[2].image" :text="cards[2].text" :price="cards[2].price"/>
+              <best-cards
+                classItem="best__item"
+                :image="cards[0].image"
+                :text="cards[0].text"
+                :price="cards[0].price"
+              />
+              <best-cards
+                classItem="best__item"
+                :image="cards[1].image"
+                :text="cards[1].text"
+                :price="cards[1].price"
+              />
+              <best-cards
+                classItem="best__item"
+                :image="cards[2].image"
+                :text="cards[2].text"
+                :price="cards[2].price"
+              />
             </div>
           </div>
         </div>
@@ -107,19 +110,19 @@ export default {
         {
           id: 0,
           text: "Coffee Aura",
-          price: "9.99$",
+          price: 9.99,
           image: "coffee-1.jpg",
         },
         {
           id: 1,
           text: "Coffee Maina",
-          price: "19.99$",
+          price: 19.99,
           image: "coffee-2.jpg",
         },
         {
           id: 2,
           text: "Coffee Nesq",
-          price: "23.99$",
+          price: 23.99,
           image: "coffee-3.jpg",
         },
       ],

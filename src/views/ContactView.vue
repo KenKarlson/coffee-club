@@ -4,12 +4,17 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <link-item 
-                :link="links[0].link"
-                :text="links[0].text" 
-                :image="links[0].icon"
-            />
-            
+            <ul
+              class="header d-flex justify-content-center justify-content-md-start flex-wrap"
+            >
+              <link-item
+                v-for="item in links"
+                :key="item.id"
+                classItem="header__item"
+                :link="item.link"
+                :text="item.text"
+              />
+            </ul>
           </div>
         </div>
         <h1 class="title-big">Contact us</h1>
