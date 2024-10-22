@@ -7,7 +7,7 @@
             <ul
               class="header d-flex justify-content-center justify-content-md-start flex-wrap"
             >
-            <li class="header__item">
+              <li class="header__item">
                 <router-link to="/"
                   ><img :src="require(`@/assets/logo/Logo.svg`)" alt="Logo.svg"
                 /></router-link>
@@ -109,27 +109,26 @@ export default {
   data() {
     return {
       links: [
-        
         {
-          id: uuidv4(),
+          //id: uuidv4(),
           text: "Our coffee",
           link: "/coffeepage.html",
           icon: "",
         },
         {
-          id: uuidv4(),
+          //id: uuidv4(),
           text: "For your pleasure",
           link: "/goodspage.html",
           icon: "",
         },
         {
-          id: uuidv4(),
+          //id: uuidv4(),
           text: "Contact us",
           link: "/contacts.html",
           icon: "",
         },
         {
-          id: 4,
+          //id: 4,
           text: "",
           link: "",
           icon: "",
