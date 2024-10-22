@@ -1,13 +1,12 @@
 <template>
   <main>
-    <div class="banner coffepage-banner">
+    <div class="banner goodspage-banner">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <ul
               class="header d-flex justify-content-center justify-content-md-start flex-wrap"
             >
-              <!--Nav-->
               <li class="footer__item">
                 <router-link :to="links[0].link"
                   ><img :src="require(`@/assets/logo/${links[0].icon}`)" alt=""
@@ -31,7 +30,7 @@
             </ul>
           </div>
         </div>
-        <h1 class="title-big">Our Coffee</h1>
+        <h1 class="title-big">For your pleasure</h1>
       </div>
     </div>
     <section class="shop">
@@ -40,7 +39,7 @@
           <div class="col-lg-4 offset-2">
             <img
               class="shop__girl"
-              src="@/assets/img/coffee_girl.jpg"
+              src="@/assets/img/coffee_goods.jpg"
               alt="girl"
             />
           </div>
@@ -66,74 +65,20 @@
             </div>
           </div>
         </div>
+
         <div class="line"></div>
-        <div class="row">
-          <div class="col-lg-4 offset-2">
-            <form action="#" class="shop__search">
-              <label class="shop__search-label" for="filter">Looking for</label>
-              <input
-                id="filter"
-                type="text"
-                placeholder="start typing here..."
-                class="shop__search-input"
-              />
-            </form>
-          </div>
-          <div class="col-lg-4">
-            <div class="shop__filter">
-              <div class="shop__filter-label">Or filter</div>
-              <div class="shop__filter-group">
-                <button class="shop__filter-btn">Brazil</button>
-                <button class="shop__filter-btn">Kenya</button>
-                <button class="shop__filter-btn">Columbia</button>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <product-card
+                v-for="card in cards"
+                :key="card.id"
                 classItem="shop__item"
-                :image="cards[0].image"
-                :product="cards[0].product"
-                :country="cards[0].country"
-                :price="cards[0].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[1].image"
-                :product="cards[1].product"
-                :country="cards[1].country"
-                :price="cards[1].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[2].image"
-                :product="cards[2].product"
-                :country="cards[2].country"
-                :price="cards[2].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[3].image"
-                :product="cards[3].product"
-                :country="cards[3].country"
-                :price="cards[3].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[4].image"
-                :product="cards[4].product"
-                :country="cards[4].country"
-                :price="cards[4].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[5].image"
-                :product="cards[5].product"
-                :country="cards[5].country"
-                :price="cards[5].price"
+                :image="card.image"
+                :product="card.product"
+                :country="card.country"
+                :price="card.price"
               />
             </div>
           </div>
@@ -146,49 +91,51 @@
 <script>
 import NawItem from "@/components/NawItem.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import { v4 as uuidv4 } from "uuid";
+
 export default {
   components: { ProductCard, NawItem },
   data() {
     return {
       cards: [
         {
-          id: 0,
+          id: uuidv4(),
           image: "coffee-3.jpg",
           product: "AROMISTICO Coffee 1kg",
           country: "Brazil",
           price: 6.99,
         },
         {
-          id: 1,
-          image: "coffee-2.jpg",
+          id: uuidv4(),
+          image: "coffee-3.jpg",
           product: "CREUSANE 1kg",
           country: "Dertyua",
           price: 16.99,
         },
         {
-          id: 2,
-          image: "coffee-1.jpg",
+          id: uuidv4(),
+          image: "coffee-3.jpg",
           product: "MUCHACHO Coffee 1kg",
           country: "Mexic",
           price: 9.99,
         },
         {
-          id: 3,
+          id: uuidv4(),
           image: "coffee-3.jpg",
           product: "Chi-Pen Coffee 1kg",
           country: "China",
           price: 3.99,
         },
         {
-          id: 4,
-          image: "coffee-2.jpg",
+          id: uuidv4(),
+          image: "coffee-3.jpg",
           product: "GERMER Coffee 1kg",
           country: "Austria",
           price: 12.99,
         },
         {
-          id: 5,
-          image: "coffee-1.jpg",
+          id: uuidv4(),
+          image: "coffee-3.jpg",
           product: "АРОМАТНОЕ Coffee 1kg",
           country: "Luanda",
           price: 6.99,
@@ -196,37 +143,37 @@ export default {
       ],
       links: [
         {
-          id: 0,
+          id: uuidv4(),
           text: "",
           link: "/",
           icon: "Logo.svg",
         },
         {
-          id: 1,
+          id: uuidv4(),
           text: "Our coffee",
           link: "/coffeepage.html",
           icon: "",
         },
         {
-          id: 2,
+          id: uuidv4(),
           text: "For your pleasure",
           link: "/goodspage.html",
           icon: "",
         },
         {
-          id: 3,
+          id: uuidv4(),
           text: "Contact us",
           link: "/contacts.html",
           icon: "",
         },
         {
-          id: 4,
+          id: uuidv4(),
           text: "",
           link: "",
           icon: "",
         },
         {
-          id: 5,
+          id: uuidv4(),
           text: "",
           link: "",
           icon: "",
