@@ -86,46 +86,13 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <product-card
+                v-for="(card, index) in cards"
+                :key="index"
                 classItem="shop__item"
-                :image="cards[0].image"
-                :product="cards[0].product"
-                :country="cards[0].country"
-                :price="cards[0].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[1].image"
-                :product="cards[1].product"
-                :country="cards[1].country"
-                :price="cards[1].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[2].image"
-                :product="cards[2].product"
-                :country="cards[2].country"
-                :price="cards[2].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[3].image"
-                :product="cards[3].product"
-                :country="cards[3].country"
-                :price="cards[3].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[4].image"
-                :product="cards[4].product"
-                :country="cards[4].country"
-                :price="cards[4].price"
-              />
-              <product-card
-                classItem="shop__item"
-                :image="cards[5].image"
-                :product="cards[5].product"
-                :country="cards[5].country"
-                :price="cards[5].price"
+                :image="card.image"
+                :product="card.product"
+                :country="card.country"
+                :price="card.price"
               />
             </div>
           </div>
@@ -188,31 +155,26 @@ export default {
       ],
       links: [
         {
-          id: 1,
           text: "Our coffee",
           link: "/coffeepage.html",
           icon: "",
         },
         {
-          id: 2,
           text: "For your pleasure",
           link: "/goodspage.html",
           icon: "",
         },
         {
-          id: 3,
           text: "Contact us",
           link: "/contacts.html",
           icon: "",
         },
         {
-          id: 4,
           text: "",
           link: "",
           icon: "",
         },
         {
-          id: 5,
           text: "",
           link: "",
           icon: "",
