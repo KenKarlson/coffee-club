@@ -7,24 +7,16 @@
             <ul
               class="header d-flex justify-content-center justify-content-md-start flex-wrap"
             >
-              <li class="footer__item">
-                <router-link :to="links[0].link"
-                  ><img :src="require(`@/assets/logo/${links[0].icon}`)" alt=""
+            <li class="header__item">
+                <router-link to="/"
+                  ><img :src="require(`@/assets/logo/Logo.svg`)" alt="Logo.svg"
                 /></router-link>
               </li>
               <naw-item
-                :link="links[1].link"
-                :text="links[1].text"
-                class="header__item"
-              ></naw-item>
-              <naw-item
-                :link="links[2].link"
-                :text="links[2].text"
-                class="header__item"
-              ></naw-item>
-              <naw-item
-                :link="links[3].link"
-                :text="links[3].text"
+                v-for="(link, index) in links"
+                :key="index"
+                :link="link.link"
+                :text="link.text"
                 class="header__item"
               ></naw-item>
             </ul>
@@ -117,12 +109,7 @@ export default {
   data() {
     return {
       links: [
-        {
-          id: uuidv4(),
-          text: "",
-          link: "/",
-          icon: "Logo.svg",
-        },
+        
         {
           id: uuidv4(),
           text: "Our coffee",

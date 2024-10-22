@@ -6,21 +6,17 @@
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
             <li class="footer__item">
-              <router-link :to="links[0].link"><img :src="require(`@/assets/logo/${links[0].icon}`)" alt=""/></router-link>
+              <router-link to="/"
+                ><img
+                  :src="require(`@/assets/logo/Logo_black.svg`)"
+                  alt="Logo.svg"
+              /></router-link>
             </li>
             <naw-item
-              :link="links[1].link"
-              :text="links[1].text"
-              class="footer__item"
-            ></naw-item>
-            <naw-item
-              :link="links[2].link"
-              :text="links[2].text"
-              class="footer__item"
-            ></naw-item>
-            <naw-item
-              :link="links[3].link"
-              :text="links[3].text"
+              v-for="(link, index) in links"
+              :key="index"
+              :link="link.link"
+              :text="link.text"
               class="footer__item"
             ></naw-item>
           </ul>
@@ -35,18 +31,12 @@
   </footer>
 </template>
 <script>
-import NawItem from '@/components/NawItem.vue';
+import NawItem from "@/components/NawItem.vue";
 export default {
   components: { NawItem },
   data() {
     return {
       links: [
-        {
-          id: 0,
-          text: "",
-          link: "/",
-          icon: "Logo_black.svg",
-        },
         {
           id: 1,
           text: "Our coffee",
