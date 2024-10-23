@@ -4,22 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <ul
-              class="header d-flex justify-content-center justify-content-md-start flex-wrap"
-            >
-              <li class="header__item">
-                <router-link to="/"
-                  ><img :src="require(`@/assets/logo/Logo.svg`)" alt="Logo.svg"
-                /></router-link>
-              </li>
-              <naw-item
-                v-for="(link, index) in links"
-                :key="index"
-                :link="link.link"
-                :text="link.text"
-                class="header__item"
-              ></naw-item>
-            </ul>
+            <nav-bar-component />
           </div>
         </div>
         <h1 class="title-big">For your pleasure</h1>
@@ -81,12 +66,12 @@
 </template>
 
 <script>
-import NawItem from "@/components/NawItem.vue";
+import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import { v4 as uuidv4 } from "uuid";
 
 export default {
-  components: { ProductCard, NawItem },
+  components: { ProductCard, NavBarComponent },
   data() {
     return {
       cards: [
@@ -131,38 +116,6 @@ export default {
           product: "АРОМАТНОЕ Coffee 1kg",
           country: "Luanda",
           price: 6.99,
-        },
-      ],
-      links: [
-        {
-          id: uuidv4(),
-          text: "Our coffee",
-          link: "/coffeepage.html",
-          icon: "",
-        },
-        {
-          id: uuidv4(),
-          text: "For your pleasure",
-          link: "/goodspage.html",
-          icon: "",
-        },
-        {
-          id: uuidv4(),
-          text: "Contact us",
-          link: "/contacts.html",
-          icon: "",
-        },
-        {
-          id: uuidv4(),
-          text: "",
-          link: "",
-          icon: "",
-        },
-        {
-          id: uuidv4(),
-          text: "",
-          link: "",
-          icon: "",
         },
       ],
     };

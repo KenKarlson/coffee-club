@@ -4,23 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <ul
-              class="header d-flex justify-content-center justify-content-md-start flex-wrap"
-            >
-              <!--Nav-->
-              <li class="header__item">
-                <router-link to="/"
-                  ><img :src="require(`@/assets/logo/Logo.svg`)" alt="Logo.svg"
-                /></router-link>
-              </li>
-              <naw-item
-                v-for="(link, index) in links"
-                :key="index"
-                :link="link.link"
-                :text="link.text"
-                class="header__item"
-              ></naw-item>
-            </ul>
+            <nav-bar-component />
           </div>
         </div>
         <h1 class="title-big">Our Coffee</h1>
@@ -103,10 +87,10 @@
 </template>
 
 <script>
-import NawItem from "@/components/NawItem.vue";
+import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 export default {
-  components: { ProductCard, NawItem },
+  components: { ProductCard, NavBarComponent },
   data() {
     return {
       cards: [
@@ -152,34 +136,7 @@ export default {
           country: "Luanda",
           price: 6.99,
         },
-      ],
-      links: [
-        {
-          text: "Our coffee",
-          link: "/coffeepage.html",
-          icon: "",
-        },
-        {
-          text: "For your pleasure",
-          link: "/goodspage.html",
-          icon: "",
-        },
-        {
-          text: "Contact us",
-          link: "/contacts.html",
-          icon: "",
-        },
-        {
-          text: "",
-          link: "",
-          icon: "",
-        },
-        {
-          text: "",
-          link: "",
-          icon: "",
-        },
-      ],
+      ]
     };
   },
 };

@@ -6,14 +6,15 @@
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
             <li class="footer__item">
-              <router-link to="/"
+              <router-link :to="links.header.link"
                 ><img
-                  :src="require(`@/assets/logo/Logo_black.svg`)"
-                  alt="Logo.svg"
-              /></router-link>
+                  :src="require(`@/assets/logo/${links.header.icon}`)"
+                  :alt="links.header.icon"
+                />
+              </router-link>
             </li>
             <naw-item
-              v-for="(link, index) in links"
+               v-for="(link, index) in links.other"
               :key="index"
               :link="link.link"
               :text="link.text"
@@ -36,38 +37,33 @@ export default {
   components: { NawItem },
   data() {
     return {
-      links: [
-        {
+      links: {
+        header: {
           id: 1,
-          text: "Our coffee",
-          link: "/coffeepage.html",
-          icon: "",
+          link: "/",
+          icon: "Logo_black.svg",
         },
-        {
-          id: 2,
-          text: "For your pleasure",
-          link: "/goodspage.html",
-          icon: "",
-        },
-        {
-          id: 3,
-          text: "Contact us",
-          link: "/contacts.html",
-          icon: "",
-        },
-        {
-          id: 4,
-          text: "",
-          link: "",
-          icon: "",
-        },
-        {
-          id: 5,
-          text: "",
-          link: "",
-          icon: "",
-        },
-      ],
+        other: [
+          {
+            id: 2,
+            text: "Our coffee",
+            link: "/coffeepage.html",
+            icon: "",
+          },
+          {
+            id: 3,
+            text: "For your pleasure",
+            link: "/goodspage.html",
+            icon: "",
+          },
+          {
+            id: 4,
+            text: "Contact us",
+            link: "/contacts.html",
+            icon: "",
+          }
+        ],
+      },
     };
   },
 };

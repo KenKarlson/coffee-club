@@ -4,22 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <ul
-              class="header d-flex justify-content-center justify-content-md-start flex-wrap"
-            >
-              <li class="header__item">
-                <router-link to="/"
-                  ><img :src="require(`@/assets/logo/Logo.svg`)" alt="Logo.svg"
-                /></router-link>
-              </li>
-              <naw-item
-                v-for="(link, index) in links"
-                :key="index"
-                :link="link.link"
-                :text="link.text"
-                class="header__item"
-              ></naw-item>
-            </ul>
+            <nav-bar-component />
           </div>
         </div>
         <h1 class="title-big">Thanks you</h1>
@@ -52,38 +37,11 @@
   </main>
 </template>
 <script>
-import NawItem from "@/components/NawItem.vue";
-import { v4 as uuidv4 } from "uuid";
+import NavBarComponent from '@/components/NavBarComponent.vue';
 export default {
-  components: { NawItem },
+  components: { NavBarComponent },
   data() {
     return {
-      links: [
-        {
-          id: uuidv4(),
-          text: "Our coffee",
-          link: "/coffeepage.html",
-          icon: "",
-        },
-        {
-          id: uuidv4(),
-          text: "For your pleasure",
-          link: "/goodspage.html",
-          icon: "",
-        },
-        {
-          id: uuidv4(),
-          text: "Contact us",
-          link: "/contacts.html",
-          icon: "",
-        },
-        {
-          id: 4,
-          text: "",
-          link: "",
-          icon: "",
-        },
-      ],
     };
   },
 };
