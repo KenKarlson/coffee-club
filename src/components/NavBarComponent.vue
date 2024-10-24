@@ -1,13 +1,24 @@
 <template>
-  <ul class="header d-flex justify-content-center justify-content-md-start flex-wrap" >
-    <li class="header__item">
-      <router-link :to="links.header.link"
-        ><img
+  <ul
+    class="header d-flex justify-content-center justify-content-md-start flex-wrap"
+  >
+    <!-- <li class="header__item">
+      <router-link :to="links.header.link">
+        <img
           :src="require(`@/assets/logo/${links.header.icon}`)"
           :alt="links.header.icon"
         />
       </router-link>
-    </li>
+    </li> -->
+    <naw-item
+    :link="links.header.link"
+    class="header__item"
+    >
+      <img
+        :src="require(`@/assets/logo/${links.header.icon}`)"
+        :alt="links.header.icon"
+      />
+    </naw-item>
     <naw-item
       v-for="(link, index) in links.other"
       :key="index"
@@ -26,6 +37,7 @@ export default {
     return {
       links: {
         header: {
+          id: 0,
           link: "/",
           icon: "Logo.svg",
         },
@@ -47,11 +59,10 @@ export default {
             text: "Contact us",
             link: "/contacts.html",
             icon: "",
-          }
+          },
         ],
       },
     };
   },
-}
-
+};
 </script>

@@ -1,6 +1,6 @@
 <template>
   <li :class="classItem">
-    <router-link :to="link"> {{ text }} </router-link>
+    <router-link :to="link"> {{ text }} <slot></slot></router-link>
   </li>
 </template>
 <script>
@@ -14,7 +14,7 @@ export default {
       type: String,
       required: true,
     },
-    image: { 
+    icon: { 
       required: false 
     },
     classItem: {
