@@ -5,16 +5,14 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
-            <li class="footer__item">
-              <router-link :to="links.header.link"
-                ><img
-                  :src="require(`@/assets/logo/${links.header.icon}`)"
-                  :alt="links.header.icon"
-                />
-              </router-link>
-            </li>
+            <naw-item :link="links.header.link" class="footer__item">
+              <img
+                :src="require(`@/assets/logo/${links.header.icon}`)"
+                :alt="links.header.icon"
+              />
+            </naw-item>
             <naw-item
-               v-for="(link, index) in links.other"
+              v-for="(link, index) in links.other"
               :key="index"
               :link="link.link"
               :text="link.text"
@@ -61,7 +59,7 @@ export default {
             text: "Contact us",
             link: "/contacts.html",
             icon: "",
-          }
+          },
         ],
       },
     };
