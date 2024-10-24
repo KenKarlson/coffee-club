@@ -63,23 +63,13 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
               <best-cards
+                v-for="(card, index) in cards"
+                :key="index"
+                :image="card.image"
+                :text="card.text"
+                :price="card.price"
                 classItem="best__item"
-                :image="cards[0].image"
-                :text="cards[0].text"
-                :price="cards[0].price"
-              />
-              <best-cards
-                classItem="best__item"
-                :image="cards[1].image"
-                :text="cards[1].text"
-                :price="cards[1].price"
-              />
-              <best-cards
-                classItem="best__item"
-                :image="cards[2].image"
-                :text="cards[2].text"
-                :price="cards[2].price"
-              />
+              ></best-cards>
             </div>
           </div>
         </div>
