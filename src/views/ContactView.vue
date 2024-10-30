@@ -105,7 +105,10 @@ export default {
     submit(event){
       console.log(event.target);
       console.log(this.form.text+'\n'+this.form.email+'\n'+this.form.phone+'\n'+this.form.message);
-      
+      this.form.text='';
+      this.form.email='';
+      this.form.phone='';
+      this.form.message='';
       
     }
   }
