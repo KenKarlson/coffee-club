@@ -108,8 +108,7 @@ export default {
       this.form.text='';
       this.form.email='';
       this.form.phone='';
-      this.form.message='';
-      
+      this.form.message='';      
     }
   }
 };
