@@ -1,3 +1,8 @@
+@use '_header';
+@use '_mainpage';
+@use '_pages';
+@use '_footer';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,8 +33,5 @@ body {
     margin-top: 60px;
     margin-bottom: 60px;
 }
-    
-@import 'header';
-@import 'mainpage';
-@import 'pages';
-@import 'footer';
+
+
